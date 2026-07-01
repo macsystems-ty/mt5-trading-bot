@@ -1,0 +1,33 @@
+2026-06-24 06:12:58,389 | INFO | Starting MT5 live trading bot for 'Volatility 25 (1s) Index' ...
+2026-06-24 06:12:58,390 | INFO | Strategy: EMA(14)-1H trend + S/R (lookback=3, tolerance=0.05%) + 10-pattern entry
+2026-06-24 06:12:58,390 | INFO | Exit: initial stop (window=10) -> breakeven after 2 favorable candles -> Stage3 trail (window=2)
+2026-06-24 06:12:58,390 | INFO | Risk per trade: 1.0% of current balance
+2026-06-24 06:12:58,392 | INFO | Preloading historical data from /Users/user/Sites/projects/mt5-trading-bot/src/live/../../markets/1HZ25V/data/1HZ25V_5min.csv ...
+2026-06-24 06:13:02,593 | INFO | Loaded 2000 historical 5min candles.
+2026-06-24 06:13:02,662 | INFO | Built 500 historical 1h candles.
+2026-06-24 06:13:02,667 | INFO | Replayed swing-level detection -- 344 levels identified from historical data.
+2026-06-24 06:13:02,677 | INFO | Trend filter immediately usable after preload: trend=DOWN
+2026-06-24 06:13:10,581 | INFO | Connected. Balance: $9873.17
+2026-06-24 06:13:12,775 | INFO | Polling live prices and building candles ... (Ctrl+C to stop)
+
+2026-06-24 06:13:12,775 | ERROR | CONNECTION HEALTH CHECK FAILED: quote streaming unhealthy
+2026-06-24 06:13:13,390 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=344 trend=DOWN open_position=no balance=$9873.17
+2026-06-24 06:14:13,463 | INFO | Connection health RECOVERED.
+2026-06-24 06:15:00,185 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=344 trend=DOWN open_position=no balance=$9873.17
+2026-06-24 06:20:00,590 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=344 trend=DOWN open_position=no balance=$9873.17
+2026-06-24 06:22:10,885 | ERROR | packet queue is empty, aborting
+2026-06-24 06:22:10,887 | ERROR | packet queue is empty, aborting
+2026-06-24 06:22:40,890 | ERROR | Unexpected error: RuntimeError('Event loop stopped before Future completed.')
+Traceback (most recent call last):
+  File "/Users/user/Sites/projects/mt5-trading-bot/src/live/live_mt5_trading_bot.py", line 913, in main
+    await send_telegram_notification("🟢 Connection health recovered.")
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 652, in run_until_complete
+    raise RuntimeError('Event loop stopped before Future completed.')
+RuntimeError: Event loop stopped before Future completed.

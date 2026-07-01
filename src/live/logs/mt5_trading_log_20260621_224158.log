@@ -1,0 +1,35 @@
+2026-06-22 01:41:58,257 | INFO | Starting MT5 live trading bot for 'Volatility 25 (1s) Index' ...
+2026-06-22 01:41:58,257 | INFO | Strategy: EMA-1H trend + S/R + Engulfing (tolerance=0.01%) + trailing stop (window=3)
+2026-06-22 01:41:58,257 | INFO | Risk per trade: 0.5% of current balance
+2026-06-22 01:41:58,258 | INFO | Preloading historical data from /Users/user/Sites/projects/mt5-trading-bot/src/live/../backtest/data/1HZ25V_1min.csv ...
+2026-06-22 01:41:58,576 | INFO | Loaded 2000 historical 1min candles.
+2026-06-22 01:41:58,577 | INFO | Built 110 historical 1h candles.
+2026-06-22 01:41:58,583 | INFO | Replayed swing-level detection -- 216 levels identified from historical data.
+2026-06-22 01:41:58,597 | INFO | Trend filter immediately usable after preload: trend=UP
+2026-06-22 01:42:06,376 | INFO | Connected. Balance: $10000.00
+2026-06-22 01:42:08,559 | INFO | Polling live prices and building candles ... (Ctrl+C to stop)
+
+2026-06-22 01:42:08,568 | INFO | Heartbeat: 1min_candles=2000 1h_candles=111 levels_tracked=216 trend=UP open_position=no balance=$10000.00
+2026-06-22 01:43:00,639 | INFO | Heartbeat: 1min_candles=2000 1h_candles=111 levels_tracked=216 trend=UP open_position=no balance=$10000.00
+2026-06-22 01:44:00,722 | INFO | Heartbeat: 1min_candles=2000 1h_candles=111 levels_tracked=216 trend=UP open_position=no balance=$10000.00
+2026-06-22 01:45:00,799 | INFO | Heartbeat: 1min_candles=2000 1h_candles=111 levels_tracked=216 trend=UP open_position=no balance=$10000.00
+2026-06-22 01:46:00,932 | INFO | Heartbeat: 1min_candles=2000 1h_candles=111 levels_tracked=216 trend=UP open_position=no balance=$10000.00
+2026-06-22 01:47:00,011 | INFO | Heartbeat: 1min_candles=2000 1h_candles=111 levels_tracked=216 trend=UP open_position=no balance=$10000.00
+2026-06-22 01:48:00,070 | INFO | New resistance level identified: 855618.90
+2026-06-22 01:48:00,081 | INFO | Heartbeat: 1min_candles=2000 1h_candles=111 levels_tracked=217 trend=UP open_position=no balance=$10000.00
+2026-06-22 01:49:00,176 | INFO | Heartbeat: 1min_candles=2000 1h_candles=111 levels_tracked=217 trend=UP open_position=no balance=$10000.00
+2026-06-22 01:49:29,997 | ERROR | packet queue is empty, aborting
+2026-06-22 01:49:29,998 | ERROR | packet queue is empty, aborting
+2026-06-22 01:50:00,018 | ERROR | Unexpected error: RuntimeError('Event loop stopped before Future completed.')
+Traceback (most recent call last):
+  File "/Users/user/Sites/projects/mt5-trading-bot/src/live/live_mt5_trading_bot.py", line 548, in main
+    asyncio.run(run_bot())
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 652, in run_until_complete
+    raise RuntimeError('Event loop stopped before Future completed.')
+RuntimeError: Event loop stopped before Future completed.

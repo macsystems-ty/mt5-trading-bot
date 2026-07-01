@@ -1,0 +1,31 @@
+2026-06-24 07:51:43,342 | INFO | Starting MT5 live trading bot for 'Volatility 100 Index' ...
+2026-06-24 07:51:43,342 | INFO | Strategy: EMA(14)-1H trend + S/R (lookback=3, tolerance=0.05%) + 10-pattern entry
+2026-06-24 07:51:43,342 | INFO | Exit: initial stop (window=10) -> breakeven after 2 favorable candles -> Stage3 trail (window=2)
+2026-06-24 07:51:43,342 | INFO | Risk per trade: 1.0% of current balance
+2026-06-24 07:51:43,343 | INFO | Preloading historical data from /Users/user/Sites/projects/mt5-trading-bot/markets/R_100/data/R_100_5min.csv ...
+2026-06-24 07:51:43,852 | INFO | Historical data freshness OK: most recent candle is 2.7 hours old.
+2026-06-24 07:51:47,618 | INFO | Loaded 2000 historical 5min candles.
+2026-06-24 07:51:47,689 | INFO | Built 500 historical 1h candles.
+2026-06-24 07:51:47,694 | INFO | Replayed swing-level detection -- 371 levels identified from historical data.
+2026-06-24 07:51:47,710 | INFO | Trend filter immediately usable after preload: trend=UP
+2026-06-24 07:51:56,392 | INFO | Connected. Balance: $9913.19
+2026-06-24 07:51:58,562 | INFO | Polling live prices and building candles ... (Ctrl+C to stop)
+
+2026-06-24 07:51:58,563 | ERROR | CONNECTION HEALTH CHECK FAILED: quote streaming unhealthy
+2026-06-24 07:51:59,324 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=371 trend=UP open_position=no balance=$9913.19
+2026-06-24 07:52:59,014 | INFO | Connection health RECOVERED.
+2026-06-24 07:53:18,195 | ERROR | packet queue is empty, aborting
+2026-06-24 07:53:18,196 | ERROR | packet queue is empty, aborting
+2026-06-24 07:53:48,199 | ERROR | Unexpected error: RuntimeError('Event loop stopped before Future completed.')
+Traceback (most recent call last):
+  File "/Users/user/Sites/projects/mt5-trading-bot/live_bots/R_100/live_mt5_trading_bot.py", line 1049, in main
+    asyncio.run(run_bot())
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 652, in run_until_complete
+    raise RuntimeError('Event loop stopped before Future completed.')
+RuntimeError: Event loop stopped before Future completed.
