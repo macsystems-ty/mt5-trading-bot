@@ -1,2 +1,6 @@
 .env
-venv/
+*.log
+__pycache__/
+*.pyc
+bot_status/
+logs/
