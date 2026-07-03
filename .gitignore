@@ -4,5 +4,8 @@ __pycache__/
 *.pyc
 bot_status/
 logs/
+<<<<<<< HEAD
 venv/
 *.tmp
+=======
+>>>>>>> cd59a60e050b3c871f52b4aa49ba36fe7ba114b1

@@ -1,0 +1,37 @@
+2026-06-24 05:50:13,977 | INFO | Starting MT5 live trading bot for 'Volatility 25 (1s) Index' ...
+2026-06-24 05:50:13,977 | INFO | Strategy: EMA(14)-1H trend + S/R (lookback=3, tolerance=0.05%) + 10-pattern entry
+2026-06-24 05:50:13,977 | INFO | Exit: initial stop (window=10) -> breakeven after 2 favorable candles -> Stage3 trail (window=2)
+2026-06-24 05:50:13,977 | INFO | Risk per trade: 1.0% of current balance
+2026-06-24 05:50:13,978 | INFO | Preloading historical data from /Users/user/Sites/projects/mt5-trading-bot/src/live/../backtest/data/1HZ25V_5min.csv ...
+2026-06-24 05:50:18,040 | INFO | Loaded 2000 historical 5min candles.
+2026-06-24 05:50:18,067 | INFO | Built 500 historical 1h candles.
+2026-06-24 05:50:18,071 | INFO | Replayed swing-level detection -- 350 levels identified from historical data.
+2026-06-24 05:50:18,081 | INFO | Trend filter immediately usable after preload: trend=UP
+2026-06-24 05:50:25,328 | INFO | Connected. Balance: $9873.17
+2026-06-24 05:50:27,563 | INFO | Polling live prices and building candles ... (Ctrl+C to stop)
+
+2026-06-24 05:50:27,563 | ERROR | CONNECTION HEALTH CHECK FAILED: quote streaming unhealthy
+2026-06-24 05:50:28,139 | INFO | New resistance level identified: 855491.29
+2026-06-24 05:50:28,151 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$9873.17
+2026-06-24 05:51:28,218 | INFO | Connection health RECOVERED.
+2026-06-24 05:55:00,122 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$9873.17
+2026-06-24 06:00:00,482 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$9873.17
+2026-06-24 06:05:00,968 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$9873.17
+2026-06-24 06:10:00,337 | INFO | New support level identified: 837801.75
+2026-06-24 06:10:00,350 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=352 trend=UP open_position=no balance=$9873.17
+2026-06-24 06:11:29,916 | ERROR | packet queue is empty, aborting
+2026-06-24 06:11:29,918 | ERROR | packet queue is empty, aborting
+2026-06-24 06:11:59,923 | ERROR | Unexpected error: RuntimeError('Event loop stopped before Future completed.')
+Traceback (most recent call last):
+  File "/Users/user/Sites/projects/mt5-trading-bot/src/live/live_mt5_trading_bot.py", line 904, in main
+    await asyncio.sleep(PRICE_POLL_INTERVAL_SECONDS)
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 652, in run_until_complete
+    raise RuntimeError('Event loop stopped before Future completed.')
+RuntimeError: Event loop stopped before Future completed.

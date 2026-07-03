@@ -1,0 +1,15 @@
+2026-06-24 08:03:02,903 | INFO | Starting MT5 live trading bot for 'Volatility 100 (1s) Index' ...
+2026-06-24 08:03:02,903 | INFO | Strategy: EMA(14)-1H trend + S/R (lookback=3, tolerance=0.05%) + 10-pattern entry
+2026-06-24 08:03:02,903 | INFO | Exit: initial stop (window=10) -> breakeven after 2 favorable candles -> Stage3 trail (window=2)
+2026-06-24 08:03:02,903 | INFO | Risk per trade: 1.0% of current balance
+2026-06-24 08:03:02,904 | INFO | Preloading historical data from /Users/user/Sites/projects/mt5-trading-bot/markets/1HZ100V/data/1HZ100V_5min.csv ...
+2026-06-24 08:03:03,363 | INFO | Historical data freshness OK: most recent candle is 3.3 hours old.
+2026-06-24 08:03:07,084 | INFO | Loaded 2000 historical 5min candles.
+2026-06-24 08:03:07,160 | INFO | Built 500 historical 1h candles.
+2026-06-24 08:03:07,166 | INFO | Replayed swing-level detection -- 358 levels identified from historical data.
+2026-06-24 08:03:07,179 | INFO | Trend filter immediately usable after preload: trend=UP
+2026-06-24 08:03:15,245 | INFO | Connected. Balance: $9913.19
+2026-06-24 08:03:17,412 | INFO | Polling live prices and building candles ... (Ctrl+C to stop)
+
+2026-06-24 08:03:17,412 | ERROR | CONNECTION HEALTH CHECK FAILED: quote streaming unhealthy
+2026-06-24 08:03:17,867 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=358 trend=UP open_position=no balance=$9913.19

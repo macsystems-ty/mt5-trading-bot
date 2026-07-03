@@ -1,0 +1,90 @@
+2026-06-24 03:16:43,788 | INFO | Starting MT5 live trading bot for 'Volatility 25 (1s) Index' ...
+2026-06-24 03:16:43,788 | INFO | Strategy: EMA(14)-1H trend + S/R (lookback=3, tolerance=0.05%) + 10-pattern entry
+2026-06-24 03:16:43,788 | INFO | Exit: initial stop (window=10) -> breakeven after 2 favorable candles -> Stage3 trail (window=2)
+2026-06-24 03:16:43,788 | INFO | Risk per trade: 1.0% of current balance
+2026-06-24 03:16:43,788 | INFO | Preloading historical data from /Users/user/Sites/projects/mt5-trading-bot/src/live/../backtest/data/1HZ25V_5min.csv ...
+2026-06-24 03:16:48,065 | INFO | Loaded 2000 historical 5min candles.
+2026-06-24 03:16:48,093 | INFO | Built 500 historical 1h candles.
+2026-06-24 03:16:48,097 | INFO | Replayed swing-level detection -- 350 levels identified from historical data.
+2026-06-24 03:16:48,110 | INFO | Trend filter immediately usable after preload: trend=UP
+2026-06-24 03:17:03,543 | INFO | Connected. Balance: $10000.00
+2026-06-24 03:17:05,769 | INFO | Polling live prices and building candles ... (Ctrl+C to stop)
+
+2026-06-24 03:17:05,769 | INFO | New resistance level identified: 855491.29
+2026-06-24 03:17:05,780 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$10000.00
+2026-06-24 03:20:00,039 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$10000.00
+2026-06-24 03:25:00,387 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$10000.00
+2026-06-24 03:30:00,669 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$10000.00
+2026-06-24 03:35:00,915 | INFO | New support level identified: 837486.62
+2026-06-24 03:35:00,931 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=352 trend=UP open_position=no balance=$10000.00
+2026-06-24 03:40:00,337 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=352 trend=UP open_position=no balance=$10000.00
+2026-06-24 03:45:00,743 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=352 trend=UP open_position=no balance=$10000.00
+2026-06-24 03:50:00,220 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=352 trend=UP open_position=no balance=$10000.00
+2026-06-24 03:55:00,680 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=352 trend=UP open_position=no balance=$10000.00
+2026-06-24 04:00:00,071 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=352 trend=UP open_position=no balance=$10000.00
+2026-06-24 04:05:00,377 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=352 trend=UP open_position=no balance=$10000.00
+2026-06-24 04:10:00,718 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=352 trend=UP open_position=no balance=$10000.00
+2026-06-24 04:15:00,023 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=352 trend=UP open_position=no balance=$10000.00
+2026-06-24 04:17:13,649 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-37829' coro=<SubscriptionManager.schedule_subscribe.<locals>.subscribe_task() done, defined at /Users/user/Sites/projects/mt5-trading-bot/venv/lib/python3.11/site-packages/metaapi_cloud_sdk/clients/metaapi/subscription_manager.py:107> exception=KeyError('type')>
+Traceback (most recent call last):
+  File "/Users/user/Sites/projects/mt5-trading-bot/venv/lib/python3.11/site-packages/metaapi_cloud_sdk/clients/metaapi/subscription_manager.py", line 110, in subscribe_task
+    await self.subscribe(account_id, instance_number)
+  File "/Users/user/Sites/projects/mt5-trading-bot/venv/lib/python3.11/site-packages/metaapi_cloud_sdk/clients/metaapi/metaapi_websocket_client.py", line 1666, in rpc_request
+    return await self._make_request(account_id, instance_number, request, timeout_in_seconds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/Sites/projects/mt5-trading-bot/venv/lib/python3.11/site-packages/metaapi_cloud_sdk/clients/metaapi/metaapi_websocket_client.py", line 1737, in _make_request
+    resolve = await asyncio.wait_for(
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/tasks.py", line 489, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+metaapi_cloud_sdk.clients.error_handler.TooManyRequestsException: It seems like you are trying to access too many unexisting or undeployed trading accounts. Please check your application logs for occurrences of NotFoundError and make sure that you attempt to access trading accounts which are actually deployed in this region.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/user/Sites/projects/mt5-trading-bot/venv/lib/python3.11/site-packages/metaapi_cloud_sdk/clients/metaapi/subscription_manager.py", line 116, in subscribe_task
+    if err.metadata['type'] == 'LIMIT_ACCOUNT_SUBSCRIPTIONS_PER_USER':
+       ~~~~~~~~~~~~^^^^^^^^
+KeyError: 'type'
+2026-06-24 04:20:00,336 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=352 trend=UP open_position=no balance=$10000.00
+2026-06-24 04:25:00,111 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=352 trend=UP open_position=no balance=$10000.00
+2026-06-24 04:30:00,564 | INFO | New resistance level identified: 842424.26
+2026-06-24 04:30:00,571 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$10000.00
+2026-06-24 04:35:00,010 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$10000.00
+2026-06-24 04:40:00,347 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$10000.00
+2026-06-24 04:45:00,610 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$10000.00
+2026-06-24 04:50:00,889 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$10000.00
+2026-06-24 04:55:00,230 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$10000.00
+2026-06-24 05:00:00,516 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$10000.00
+2026-06-24 05:00:00,526 | INFO | Attempting to open BUY trade: volume=0.083 lots, risk target=1.0% of $10000.00, stop_distance=0.1430%
+2026-06-24 05:00:01,352 | INFO | ✅ TRADE OPENED: BUY position_id=5695740568 volume=0.083 entry≈839052.39
+2026-06-24 05:05:00,523 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=YES balance=$10000.00
+2026-06-24 05:05:01,305 | INFO | 🔚 TRADE CLOSED (initial or breakeven stop hit): position_id=5695740568 (total trades completed: 1)
+2026-06-24 05:10:00,759 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$10000.00
+2026-06-24 05:15:00,121 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$9873.17
+2026-06-24 05:20:00,433 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$9873.17
+2026-06-24 05:25:00,577 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$9873.17
+2026-06-24 05:30:00,031 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$9873.17
+2026-06-24 05:35:00,447 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$9873.17
+2026-06-24 05:40:00,071 | INFO | New support level identified: 836497.60
+2026-06-24 05:40:00,079 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=354 trend=UP open_position=no balance=$9873.17
+2026-06-24 05:45:00,713 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=354 trend=UP open_position=no balance=$9873.17
+2026-06-24 05:50:00,291 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=354 trend=UP open_position=no balance=$9873.17
+2026-06-24 05:50:05,338 | ERROR | packet queue is empty, aborting
+2026-06-24 05:50:05,340 | ERROR | packet queue is empty, aborting
+2026-06-24 05:50:07,344 | ERROR | Unexpected error: RuntimeError('Event loop stopped before Future completed.')
+Traceback (most recent call last):
+  File "/Users/user/Sites/projects/mt5-trading-bot/src/live/live_mt5_trading_bot.py", line 849, in main
+    aggregator.add_tick(epoch, mid_price)
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 652, in run_until_complete
+    raise RuntimeError('Event loop stopped before Future completed.')
+RuntimeError: Event loop stopped before Future completed.

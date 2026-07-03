@@ -1,0 +1,30 @@
+2026-06-24 03:11:16,314 | INFO | Starting MT5 live trading bot for 'Volatility 25 (1s) Index' ...
+2026-06-24 03:11:16,314 | INFO | Strategy: EMA(14)-1H trend + S/R (lookback=3, tolerance=0.05%) + 10-pattern entry
+2026-06-24 03:11:16,315 | INFO | Exit: initial stop (window=10) -> breakeven after 2 favorable candles -> Stage3 trail (window=2)
+2026-06-24 03:11:16,315 | INFO | Risk per trade: 1.0% of current balance
+2026-06-24 03:11:16,315 | INFO | Preloading historical data from /Users/user/Sites/projects/mt5-trading-bot/src/live/../backtest/data/1HZ25V_5min.csv ...
+2026-06-24 03:11:20,469 | INFO | Loaded 2000 historical 5min candles.
+2026-06-24 03:11:20,497 | INFO | Built 500 historical 1h candles.
+2026-06-24 03:11:20,501 | INFO | Replayed swing-level detection -- 350 levels identified from historical data.
+2026-06-24 03:11:20,512 | INFO | Trend filter immediately usable after preload: trend=UP
+2026-06-24 03:11:28,177 | INFO | Connected. Balance: $8833.17
+2026-06-24 03:11:30,355 | INFO | Polling live prices and building candles ... (Ctrl+C to stop)
+
+2026-06-24 03:11:30,356 | INFO | DIAGNOSTIC (one-time): raw price quote keys: ['symbol', 'bid', 'ask', 'time', 'brokerTime', 'accountCurrencyExchangeRate', 'profitTickValue', 'lossTickValue', 'timestamps', 'equity']
+2026-06-24 03:11:30,356 | INFO | New resistance level identified: 855491.29
+2026-06-24 03:11:30,366 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$8833.17
+2026-06-24 03:15:00,598 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$8833.17
+2026-06-24 03:16:06,719 | ERROR | packet queue is empty, aborting
+2026-06-24 03:16:06,721 | ERROR | packet queue is empty, aborting
+2026-06-24 03:16:36,725 | ERROR | Unexpected error: RuntimeError('Event loop stopped before Future completed.')
+Traceback (most recent call last):
+  File "/Users/user/Sites/projects/mt5-trading-bot/src/live/live_mt5_trading_bot.py", line 854, in main
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 652, in run_until_complete
+    raise RuntimeError('Event loop stopped before Future completed.')
+RuntimeError: Event loop stopped before Future completed.

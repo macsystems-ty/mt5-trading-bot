@@ -1,0 +1,237 @@
+2026-06-23 00:04:34,599 | INFO | Starting MT5 live trading bot for 'Volatility 25 (1s) Index' ...
+2026-06-23 00:04:34,599 | INFO | Strategy: EMA-1H trend + S/R + Engulfing (tolerance=0.05%) + trailing stop (window=3)
+2026-06-23 00:04:34,599 | INFO | Risk per trade: 1.0% of current balance
+2026-06-23 00:04:34,599 | INFO | Preloading historical data from /Users/user/Sites/projects/mt5-trading-bot/src/live/../backtest/data/1HZ25V_5min.csv ...
+2026-06-23 00:04:38,829 | INFO | Loaded 2000 historical 5min candles.
+2026-06-23 00:04:38,857 | INFO | Built 500 historical 1h candles.
+2026-06-23 00:04:38,861 | INFO | Replayed swing-level detection -- 350 levels identified from historical data.
+2026-06-23 00:04:38,871 | INFO | Trend filter immediately usable after preload: trend=UP
+2026-06-23 00:04:46,573 | INFO | Connected. Balance: $8856.23
+2026-06-23 00:04:48,745 | INFO | Polling live prices and building candles ... (Ctrl+C to stop)
+
+2026-06-23 00:04:48,746 | INFO | New resistance level identified: 855491.29
+2026-06-23 00:04:48,758 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$8856.23
+2026-06-23 00:05:00,786 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$8856.23
+2026-06-23 00:10:00,097 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$8856.23
+2026-06-23 00:15:00,622 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$8856.23
+2026-06-23 00:20:00,964 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$8856.23
+2026-06-23 00:25:00,275 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$8856.23
+2026-06-23 00:30:00,866 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$8856.23
+2026-06-23 00:35:00,406 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=351 trend=UP open_position=no balance=$8856.23
+2026-06-23 00:40:00,946 | INFO | New support level identified: 833255.41
+2026-06-23 00:40:00,953 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=352 trend=UP open_position=no balance=$8856.23
+2026-06-23 00:45:00,522 | INFO | New support level identified: 833255.41
+2026-06-23 00:45:00,532 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$8856.23
+2026-06-23 00:50:00,059 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$8856.23
+2026-06-23 00:55:00,447 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$8856.23
+2026-06-23 01:00:00,743 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=353 trend=UP open_position=no balance=$8856.23
+2026-06-23 01:05:00,032 | INFO | New resistance level identified: 836511.33
+2026-06-23 01:05:00,044 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=354 trend=UP open_position=no balance=$8856.23
+2026-06-23 01:10:00,367 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=354 trend=UP open_position=no balance=$8856.23
+2026-06-23 01:15:00,695 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=354 trend=UP open_position=no balance=$8856.23
+2026-06-23 01:20:00,992 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=354 trend=UP open_position=no balance=$8856.23
+2026-06-23 01:25:00,304 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=354 trend=UP open_position=no balance=$8856.23
+2026-06-23 01:30:00,609 | INFO | New support level identified: 834628.19
+2026-06-23 01:30:00,618 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=355 trend=UP open_position=no balance=$8856.23
+2026-06-23 01:35:00,016 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=355 trend=UP open_position=no balance=$8856.23
+2026-06-23 01:40:00,337 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=355 trend=UP open_position=no balance=$8856.23
+2026-06-23 01:45:00,667 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=355 trend=UP open_position=no balance=$8856.23
+2026-06-23 01:50:00,036 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=355 trend=UP open_position=no balance=$8856.23
+2026-06-23 01:55:00,383 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=355 trend=UP open_position=no balance=$8856.23
+2026-06-23 02:00:00,721 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=355 trend=UP open_position=no balance=$8856.23
+2026-06-23 02:05:00,089 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=355 trend=UP open_position=no balance=$8856.23
+2026-06-23 02:10:00,433 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=355 trend=UP open_position=no balance=$8856.23
+2026-06-23 02:15:00,777 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=355 trend=UP open_position=no balance=$8856.23
+2026-06-23 02:20:00,064 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=355 trend=UP open_position=no balance=$8856.23
+2026-06-23 02:25:00,380 | INFO | New resistance level identified: 839191.59
+2026-06-23 02:25:00,392 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=356 trend=UP open_position=no balance=$8856.23
+2026-06-23 02:30:00,740 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=356 trend=UP open_position=no balance=$8856.23
+2026-06-23 02:35:00,117 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=356 trend=UP open_position=no balance=$8856.23
+2026-06-23 02:40:00,410 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=356 trend=UP open_position=no balance=$8856.23
+2026-06-23 02:45:00,743 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=356 trend=UP open_position=no balance=$8856.23
+2026-06-23 02:50:00,064 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=356 trend=UP open_position=no balance=$8856.23
+2026-06-23 02:55:00,401 | INFO | New support level identified: 835495.12
+2026-06-23 02:55:00,413 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 03:00:00,736 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 03:05:00,072 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 03:10:00,402 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 03:15:00,751 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 03:20:00,071 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 03:25:00,386 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 03:30:00,700 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 03:35:00,010 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 03:40:00,344 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 03:45:00,877 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 03:50:00,150 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 03:55:00,480 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 04:00:00,808 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 04:05:00,043 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 04:10:00,361 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 04:15:00,687 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 04:20:00,050 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 04:25:00,394 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=357 trend=UP open_position=no balance=$8856.23
+2026-06-23 04:30:00,679 | INFO | New resistance level identified: 842483.52
+2026-06-23 04:30:00,688 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=358 trend=UP open_position=no balance=$8856.23
+2026-06-23 04:35:00,045 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=358 trend=UP open_position=no balance=$8856.23
+2026-06-23 04:40:00,375 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=358 trend=UP open_position=no balance=$8856.23
+2026-06-23 04:45:00,683 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=358 trend=UP open_position=no balance=$8856.23
+2026-06-23 04:50:00,979 | INFO | New support level identified: 839280.85
+2026-06-23 04:50:00,988 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=359 trend=UP open_position=no balance=$8856.23
+2026-06-23 04:55:00,386 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=359 trend=UP open_position=no balance=$8856.23
+2026-06-23 05:00:00,727 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=359 trend=UP open_position=no balance=$8856.23
+2026-06-23 05:05:00,067 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=359 trend=UP open_position=no balance=$8856.23
+2026-06-23 05:10:00,386 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=359 trend=UP open_position=no balance=$8856.23
+2026-06-23 05:15:00,730 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=359 trend=UP open_position=no balance=$8856.23
+2026-06-23 05:20:00,045 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=359 trend=UP open_position=no balance=$8856.23
+2026-06-23 05:25:00,367 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=359 trend=UP open_position=no balance=$8856.23
+2026-06-23 05:30:00,654 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=359 trend=UP open_position=no balance=$8856.23
+2026-06-23 05:35:01,007 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=359 trend=UP open_position=no balance=$8856.23
+2026-06-23 05:40:00,350 | INFO | New resistance level identified: 843230.20
+2026-06-23 05:40:00,358 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=360 trend=UP open_position=no balance=$8856.23
+2026-06-23 05:45:00,681 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=360 trend=UP open_position=no balance=$8856.23
+2026-06-23 05:50:00,014 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=360 trend=UP open_position=no balance=$8856.23
+2026-06-23 05:55:00,332 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=360 trend=UP open_position=no balance=$8856.23
+2026-06-23 06:00:00,652 | INFO | New support level identified: 840811.56
+2026-06-23 06:00:00,660 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 06:05:00,974 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 06:10:00,297 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 06:15:00,612 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 06:20:00,888 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 06:25:00,230 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 06:30:00,544 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 06:35:00,866 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 06:40:00,204 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 06:45:00,507 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 06:50:00,814 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 06:55:00,146 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 07:00:00,480 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 07:05:00,824 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 07:10:00,160 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 07:15:00,478 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 07:20:00,802 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=361 trend=UP open_position=no balance=$8856.23
+2026-06-23 07:25:00,120 | INFO | New resistance level identified: 845499.66
+2026-06-23 07:25:00,128 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=362 trend=UP open_position=no balance=$8856.23
+2026-06-23 07:30:00,439 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=362 trend=UP open_position=no balance=$8856.23
+2026-06-23 07:35:00,335 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=362 trend=UP open_position=no balance=$8856.23
+2026-06-23 07:40:00,669 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=362 trend=UP open_position=no balance=$8856.23
+2026-06-23 07:45:00,988 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=362 trend=UP open_position=no balance=$8856.23
+2026-06-23 07:50:00,416 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=362 trend=UP open_position=no balance=$8856.23
+2026-06-23 07:55:00,737 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=362 trend=UP open_position=no balance=$8856.23
+2026-06-23 08:00:00,071 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=362 trend=UP open_position=no balance=$8856.23
+2026-06-23 08:05:00,530 | INFO | New support level identified: 842156.40
+2026-06-23 08:05:00,540 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=363 trend=UP open_position=no balance=$8856.23
+2026-06-23 08:05:00,549 | INFO | Attempting to open BUY trade: volume=0.11 lots, risk target=1.0% of $8856.23, stop_distance=0.0946%
+2026-06-23 08:05:01,342 | INFO | ✅ TRADE OPENED: BUY position_id=5694835636 volume=0.11 entry≈843262.05
+2026-06-23 08:10:00,621 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=363 trend=UP open_position=YES balance=$8856.23
+2026-06-23 08:15:01,001 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=363 trend=UP open_position=YES balance=$8856.23
+2026-06-23 08:20:00,320 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=363 trend=UP open_position=YES balance=$8856.23
+2026-06-23 08:25:00,888 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=363 trend=UP open_position=YES balance=$8856.23
+2026-06-23 08:30:00,326 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=363 trend=UP open_position=YES balance=$8856.23
+2026-06-23 08:35:00,629 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=363 trend=UP open_position=YES balance=$8856.23
+2026-06-23 08:40:00,267 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=363 trend=UP open_position=YES balance=$8856.23
+2026-06-23 08:40:01,065 | INFO | 🔚 TRADE CLOSED (trailing stop hit): position_id=5694835636 (total trades completed: 1)
+2026-06-23 08:45:00,378 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=363 trend=UP open_position=no balance=$8856.23
+2026-06-23 08:50:00,815 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=363 trend=UP open_position=no balance=$9044.42
+2026-06-23 08:55:00,188 | INFO | New support level identified: 844240.60
+2026-06-23 08:55:00,197 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=364 trend=UP open_position=no balance=$9044.42
+2026-06-23 09:00:00,683 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=364 trend=UP open_position=no balance=$9044.42
+2026-06-23 09:05:00,065 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=364 trend=UP open_position=no balance=$9044.42
+2026-06-23 09:10:00,422 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=364 trend=UP open_position=no balance=$9044.42
+2026-06-23 09:15:00,798 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=364 trend=UP open_position=no balance=$9044.42
+2026-06-23 09:20:00,263 | INFO | New resistance level identified: 846862.73
+2026-06-23 09:20:00,290 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=365 trend=UP open_position=no balance=$9044.42
+2026-06-23 09:25:00,793 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=365 trend=UP open_position=no balance=$9044.42
+2026-06-23 09:30:00,177 | INFO | New support level identified: 844816.48
+2026-06-23 09:30:00,185 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=366 trend=UP open_position=no balance=$9044.42
+2026-06-23 09:35:00,572 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=366 trend=UP open_position=no balance=$9044.42
+2026-06-23 09:40:00,984 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=366 trend=UP open_position=no balance=$9044.42
+2026-06-23 09:45:00,349 | INFO | New resistance level identified: 847769.34
+2026-06-23 09:45:00,363 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=367 trend=UP open_position=no balance=$9044.42
+2026-06-23 09:50:00,796 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=367 trend=UP open_position=no balance=$9044.42
+2026-06-23 09:55:00,259 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=367 trend=UP open_position=no balance=$9044.42
+2026-06-23 09:55:00,267 | INFO | Attempting to open BUY trade: volume=0.046 lots, risk target=1.0% of $9044.42, stop_distance=0.2309%
+2026-06-23 09:55:01,208 | INFO | ✅ TRADE OPENED: BUY position_id=5694915352 volume=0.046 entry≈846141.42
+2026-06-23 10:00:00,569 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=367 trend=UP open_position=YES balance=$9044.42
+2026-06-23 10:05:00,869 | INFO | New support level identified: 844187.75
+2026-06-23 10:05:00,877 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=YES balance=$9044.42
+2026-06-23 10:10:00,241 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=YES balance=$9044.42
+2026-06-23 10:10:01,071 | INFO | 🔚 TRADE CLOSED (trailing stop hit): position_id=5694915352 (total trades completed: 2)
+2026-06-23 10:15:00,385 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=no balance=$9044.42
+2026-06-23 10:20:00,802 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=no balance=$9096.96
+2026-06-23 10:25:00,245 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=no balance=$9096.96
+2026-06-23 10:30:00,631 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=no balance=$9096.96
+2026-06-23 10:35:00,963 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=no balance=$9096.96
+2026-06-23 10:40:00,255 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=no balance=$9096.96
+2026-06-23 10:45:00,630 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=no balance=$9096.96
+2026-06-23 10:45:00,639 | INFO | Attempting to open BUY trade: volume=0.071 lots, risk target=1.0% of $9096.96, stop_distance=0.1490%
+2026-06-23 10:45:01,457 | INFO | ✅ TRADE OPENED: BUY position_id=5694956576 volume=0.071 entry≈849605.89
+2026-06-23 10:50:00,874 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=YES balance=$9096.96
+2026-06-23 10:55:00,307 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=YES balance=$9096.96
+2026-06-23 11:00:00,720 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=YES balance=$9096.96
+2026-06-23 11:00:01,855 | INFO | 🔚 TRADE CLOSED (trailing stop hit): position_id=5694956576 (total trades completed: 3)
+2026-06-23 11:05:00,298 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=no balance=$9096.96
+2026-06-23 11:10:00,708 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=no balance=$9143.59
+2026-06-23 11:15:00,169 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=no balance=$9143.59
+2026-06-23 11:20:00,550 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=no balance=$9143.59
+2026-06-23 11:25:00,892 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=no balance=$9143.59
+2026-06-23 11:30:00,317 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=no balance=$9143.59
+2026-06-23 11:35:00,716 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=no balance=$9143.59
+2026-06-23 11:40:00,084 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=368 trend=UP open_position=no balance=$9143.59
+2026-06-23 11:45:00,478 | INFO | New resistance level identified: 852054.65
+2026-06-23 11:45:00,479 | INFO | New support level identified: 850535.69
+2026-06-23 11:45:00,494 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=370 trend=UP open_position=no balance=$9143.59
+2026-06-23 11:45:00,510 | INFO | Attempting to open BUY trade: volume=0.077 lots, risk target=1.0% of $9143.59, stop_distance=0.1390%
+2026-06-23 11:45:01,328 | INFO | ✅ TRADE OPENED: BUY position_id=5695004607 volume=0.077 entry≈851919.63
+2026-06-23 11:50:00,754 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=370 trend=UP open_position=YES balance=$9143.59
+2026-06-23 11:55:00,404 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=370 trend=UP open_position=YES balance=$9143.59
+2026-06-23 12:00:00,962 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=370 trend=UP open_position=YES balance=$9143.59
+2026-06-23 12:05:00,359 | INFO | New resistance level identified: 852264.18
+2026-06-23 12:05:00,374 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=371 trend=UP open_position=YES balance=$9143.59
+2026-06-23 12:10:00,808 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=371 trend=UP open_position=YES balance=$9143.59
+2026-06-23 12:10:01,605 | INFO | 🔚 TRADE CLOSED (trailing stop hit): position_id=5695004607 (total trades completed: 4)
+2026-06-23 12:15:00,913 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=371 trend=UP open_position=no balance=$9143.59
+2026-06-23 12:20:00,278 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=371 trend=UP open_position=no balance=$9054.44
+2026-06-23 12:25:00,910 | INFO | New resistance level identified: 852426.07
+2026-06-23 12:25:00,919 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=372 trend=UP open_position=no balance=$9054.44
+2026-06-23 12:30:00,976 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=372 trend=UP open_position=no balance=$9054.44
+2026-06-23 12:30:00,984 | INFO | Attempting to open BUY trade: volume=0.076 lots, risk target=1.0% of $9054.44, stop_distance=0.1397%
+2026-06-23 12:30:01,885 | INFO | ✅ TRADE OPENED: BUY position_id=5695035320 volume=0.076 entry≈851581.46
+2026-06-23 12:35:00,289 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=372 trend=UP open_position=YES balance=$9054.44
+2026-06-23 12:40:00,636 | INFO | New support level identified: 850391.43
+2026-06-23 12:40:00,645 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=373 trend=UP open_position=YES balance=$9054.44
+2026-06-23 12:45:00,087 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=373 trend=UP open_position=YES balance=$9054.44
+2026-06-23 12:50:00,423 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=373 trend=UP open_position=YES balance=$9054.44
+2026-06-23 12:50:01,260 | INFO | 🔚 TRADE CLOSED (trailing stop hit): position_id=5695035320 (total trades completed: 5)
+2026-06-23 12:55:00,660 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=373 trend=UP open_position=no balance=$9054.44
+2026-06-23 13:00:00,005 | INFO | New resistance level identified: 852911.21
+2026-06-23 13:00:00,024 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=374 trend=UP open_position=no balance=$9022.35
+2026-06-23 13:05:00,550 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=374 trend=UP open_position=no balance=$9022.35
+2026-06-23 13:10:00,882 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=374 trend=UP open_position=no balance=$9022.35
+2026-06-23 13:15:00,150 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=374 trend=UP open_position=no balance=$9022.35
+2026-06-23 13:20:00,322 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=374 trend=UP open_position=no balance=$9022.35
+2026-06-23 13:25:00,671 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=374 trend=UP open_position=no balance=$9022.35
+2026-06-23 13:30:00,032 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=374 trend=UP open_position=no balance=$9022.35
+2026-06-23 13:35:00,270 | INFO | New support level identified: 849043.96
+2026-06-23 13:35:00,278 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=375 trend=UP open_position=no balance=$9022.35
+2026-06-23 13:40:00,642 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=375 trend=UP open_position=no balance=$9022.35
+2026-06-23 13:45:00,102 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=375 trend=UP open_position=no balance=$9022.35
+2026-06-23 13:50:00,389 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=375 trend=UP open_position=no balance=$9022.35
+2026-06-23 13:55:00,635 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=375 trend=UP open_position=no balance=$9022.35
+2026-06-23 14:00:00,016 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=375 trend=UP open_position=no balance=$9022.35
+2026-06-23 14:05:00,359 | INFO | Heartbeat: 5min_candles=2000 1h_candles=500 levels_tracked=375 trend=UP open_position=no balance=$9022.35
+2026-06-23 14:06:04,325 | ERROR | packet queue is empty, aborting
+2026-06-23 14:06:04,326 | ERROR | packet queue is empty, aborting
+2026-06-23 14:06:08,336 | ERROR | Unexpected error: RuntimeError('Event loop stopped before Future completed.')
+Traceback (most recent call last):
+  File "/Users/user/Sites/projects/mt5-trading-bot/src/live/live_mt5_trading_bot.py", line 610, in main
+    preload_historical_data(state)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.15_3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 652, in run_until_complete
+    raise RuntimeError('Event loop stopped before Future completed.')
+RuntimeError: Event loop stopped before Future completed.
