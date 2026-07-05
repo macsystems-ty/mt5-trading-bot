@@ -101,9 +101,9 @@ LEVEL_AGE_CAP                   = 200
 MAX_PRICE_STALENESS_SECONDS     = 30
 
 RISK_PER_TRADE_PCT = 1.0
-MIN_VOLUME         = 0.001
-MAX_VOLUME         = 2.0
-VOLUME_STEP        = 0.001
+MIN_VOLUME         = 0.05
+MAX_VOLUME         = 80.0
+VOLUME_STEP        = 0.05
 MAGIC_NUMBER       = 234001  # unique identifier for orders placed by this bot
 
 PRICE_POLL_INTERVAL_SECONDS = 1.0
@@ -227,7 +227,43 @@ def get_open_position() -> Optional[mt5.TradePosition]:
     return None
 
 
-def update_sl_on_broker(ticket: int, new_sl: float) -> bool:
+def fetch_1h_candles_from_mt5(count: int = 500) -> List[Candle]:
+    """
+    Fetch 1H candles DIRECTLY from MT5 — much more accurate than
+    building them from 5min CSV data which can be stale.
+    """
+    rates = mt5.copy_rates_from_pos(SYMBOL, mt5.TIMEFRAME_H1, 0, count)
+    if rates is None or len(rates) == 0:
+        logger.error(f"Could not fetch 1H candles from MT5: {mt5.last_error()}")
+        return []
+
+    candles = []
+    for r in rates:
+        candles.append(Candle(
+            timeframe="1h",
+            open_time=datetime.fromtimestamp(r["time"], tz=timezone.utc),
+            open=float(r["open"]),
+            high=float(r["high"]),
+            low=float(r["low"]),
+            close=float(r["close"]),
+            tick_count=0,
+        ))
+    logger.info(f"Fetched {len(candles)} 1H candles directly from MT5.")
+    return candles
+
+
+def refresh_1h_candles_from_mt5(state: BotState) -> None:
+    """
+    Update state.candles_1h with the latest 1H candles from MT5.
+    Called periodically to keep the trend filter accurate.
+    """
+    new_candles = fetch_1h_candles_from_mt5(count=500)
+    if new_candles:
+        state.candles_1h = new_candles
+        logger.info(f"1H candles refreshed from MT5: {len(state.candles_1h)} candles.")
+
+
+
     """Modify the broker-side stop loss for an open position."""
     request = {
         "action":   mt5.TRADE_ACTION_SLTP,
@@ -545,20 +581,38 @@ async def close_trade(state: BotState, reason: str) -> None:
     }
 
     result = mt5.order_send(request)
-    if result is None or result.retcode != mt5.TRADE_RETCODE_DONE:
-        # Check if position still exists
-        still_open = get_open_position() is not None
-        if still_open:
+
+    # Check if position is actually closed regardless of retcode
+    # retcode 1 = 'Success' on some brokers (non-standard but valid)
+    # retcode 10009 = TRADE_RETCODE_DONE (standard success)
+    position_still_open = get_open_position() is not None
+
+    if result is None or (result.retcode != mt5.TRADE_RETCODE_DONE and result.retcode != 1):
+        if position_still_open:
             error = result.comment if result else str(mt5.last_error())
-            logger.error(f"Close failed, position still open: {error}")
+            logger.error(f"Close failed: retcode={result.retcode if result else 'None'} error={error}")
             await send_telegram_notification(
-                f"⚠️ <b>Close failed, position still open</b>\n"
-                f"Ticket: {position.position_id}\nReason: {reason}\n"
-                f"Will retry next cycle."
+                f"⚠️ <b>CLOSE FAILED</b>\n"
+                f"Ticket: {position.position_id}\n"
+                f"Retcode: {result.retcode if result else 'None'}\n"
+                f"Error: {error}"
             )
             return
-        # Position already closed (e.g. hit broker SL)
-        logger.warning("Close failed but position no longer exists — clearing state.")
+        else:
+            logger.warning(f"Close returned retcode={result.retcode if result else 'None'} but position is gone -- treating as closed.")
+
+    elif position_still_open:
+        logger.warning(f"Close retcode={result.retcode} but position still open -- retrying...")
+        await asyncio.sleep(2)
+        position_still_open = get_open_position() is not None
+        if position_still_open:
+            logger.error(f"Position still open after retry -- giving up.")
+            await send_telegram_notification(
+                f"⚠️ <b>CLOSE FAILED - POSITION STILL OPEN</b>\n"
+                f"Ticket: {position.position_id}\n"
+                f"Please close manually in MT5!"
+            )
+            return
 
     state.trades_completed += 1
     exit_price = result.price if (result and result.retcode == mt5.TRADE_RETCODE_DONE) else price
@@ -803,21 +857,30 @@ def preload_historical_data(state: BotState) -> None:
     state.candles_5min = historical_candles[-2000:]
     logger.info(f"Loaded {len(state.candles_5min)} historical 5min candles.")
 
-    chunk_size  = 12
-    full_chunks = len(historical_candles) // chunk_size
-    for i in range(full_chunks):
-        chunk = historical_candles[i * chunk_size: (i + 1) * chunk_size]
-        state.candles_1h.append(Candle(
-            timeframe="1h",
-            open_time=chunk[0].open_time,
-            open=chunk[0].open,
-            high=max(c.high for c in chunk),
-            low=min(c.low  for c in chunk),
-            close=chunk[-1].close,
-            tick_count=0,
-        ))
-    state.candles_1h = state.candles_1h[-500:]
-    logger.info(f"Built {len(state.candles_1h)} historical 1h candles.")
+    # Fetch 1H candles DIRECTLY from MT5 instead of building from 5min CSV
+    # This ensures the trend filter uses accurate, up-to-date 1H data
+    mt5_1h = fetch_1h_candles_from_mt5(count=500)
+    if mt5_1h:
+        state.candles_1h = mt5_1h
+        logger.info(f"Loaded {len(state.candles_1h)} 1H candles directly from MT5.")
+    else:
+        # Fallback: build from 5min CSV if MT5 fetch fails
+        logger.warning("MT5 1H fetch failed — building 1H from 5min CSV as fallback.")
+        chunk_size  = 12
+        full_chunks = len(historical_candles) // chunk_size
+        for i in range(full_chunks):
+            chunk = historical_candles[i * chunk_size: (i + 1) * chunk_size]
+            state.candles_1h.append(Candle(
+                timeframe="1h",
+                open_time=chunk[0].open_time,
+                open=chunk[0].open,
+                high=max(c.high for c in chunk),
+                low=min(c.low  for c in chunk),
+                close=chunk[-1].close,
+                tick_count=0,
+            ))
+        state.candles_1h = state.candles_1h[-500:]
+        logger.info(f"Built {len(state.candles_1h)} 1H candles from 5min CSV (fallback).")
 
     full_history = state.candles_5min[:]
     state.candles_5min = []
@@ -932,6 +995,7 @@ async def run_bot() -> None:
     last_seen_open_time  = None
     last_h1_build_count  = 0
     last_staleness_warn  = None
+    last_1h_refresh      = datetime.now(timezone.utc)  # track when we last refreshed 1H from MT5
 
     logger.info("Polling live prices ... (Ctrl+C to stop)\n")
 
@@ -979,19 +1043,12 @@ async def run_bot() -> None:
                     last_seen_open_time = current_open_time
                     total_candles = len(state.candles_5min)
 
-                    if total_candles >= 12 and total_candles - last_h1_build_count >= 12:
-                        chunk = state.candles_5min[-12:]
-                        state.candles_1h.append(Candle(
-                            timeframe="1h",
-                            open_time=chunk[0].open_time,
-                            open=chunk[0].open,
-                            high=max(c.high for c in chunk),
-                            low=min(c.low  for c in chunk),
-                            close=chunk[-1].close,
-                            tick_count=0,
-                        ))
-                        state.candles_1h = state.candles_1h[-500:]
-                        last_h1_build_count = total_candles
+                    # Refresh 1H candles from MT5 every 60 minutes
+                    # This is far more accurate than building from 5min data
+                    now_utc = datetime.now(timezone.utc)
+                    if (now_utc - last_1h_refresh).total_seconds() >= 3600:
+                        refresh_1h_candles_from_mt5(state)
+                        last_1h_refresh = now_utc
 
                     update_swing_levels(state)
                     trend_status, _ = compute_current_trend(state)
